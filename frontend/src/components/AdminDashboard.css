@@ -7,6 +7,17 @@
 .admin-header {
   max-width: 1200px;
   margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.header-logo-admin {
+  margin-bottom: 1.5rem;
+}
+
+.logo-image-admin {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
 }
 
 .admin-header h1 {
