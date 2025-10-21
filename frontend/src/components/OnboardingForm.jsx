@@ -531,6 +531,7 @@ export default function OnboardingForm() {
             
             <div className="form-group">
               <Label htmlFor="supportContact">Support Contact *</Label>
+              <p className="field-description">When the user needs/asks to speak to a human, or support, what is the contact email and/or phone number it should provide</p>
               <Input
                 id="supportContact"
                 data-testid="support-contact-input"
