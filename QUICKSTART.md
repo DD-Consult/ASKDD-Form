@@ -119,7 +119,7 @@ Choose one of these options:
 
 1. Visit your Netlify URL
 2. Fill out and submit the form
-3. Check email at `amrit@ddconsult.tech`
+3. Check email at `askdd@ddconsult.tech`
 4. Check admin dashboard at `https://your-site.netlify.app/admin`
 
 ## Auto-Deploy on Git Push
@@ -150,5 +150,7 @@ git push origin main
 - Check backend logs
 
 ## Need Help?
+
+**Contact:** askdd@ddconsult.tech
 
 See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions and troubleshooting.
