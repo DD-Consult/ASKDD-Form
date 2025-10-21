@@ -1,1 +1,145 @@
-# Here are your Instructions
+# ASKDD Chatbot Onboarding Form
+
+A professional client onboarding questionnaire system for collecting AI chatbot configuration requirements.
+
+## Features
+
+- ✅ Comprehensive multi-section questionnaire
+- ✅ File upload support (logos and documents)
+- ✅ Email notifications with attachments
+- ✅ MongoDB database storage
+- ✅ Admin dashboard for viewing submissions
+- ✅ Responsive, clean design
+- ✅ Form validation
+
+## Tech Stack
+
+### Frontend
+- React 19
+- Tailwind CSS
+- Shadcn UI Components
+- React Hook Form
+- Axios
+
+### Backend
+- FastAPI
+- MongoDB (Motor async driver)
+- Python SMTP for email
+- Pydantic for validation
+
+## Quick Start (Local Development)
+
+### Prerequisites
+- Node.js 20+
+- Python 3.10+
+- MongoDB
+
+### Backend Setup
+
+```bash
+cd backend
+pip install -r requirements.txt
+
+# Create .env file with:
+MONGO_URL="mongodb://localhost:27017"
+DB_NAME="client_forms_db"
+SMTP_HOST="smtp.gmail.com"
+SMTP_PORT=587
+SMTP_EMAIL="your-email@gmail.com"
+SMTP_PASSWORD="your-app-password"
+RECIPIENT_EMAIL="recipient@example.com"
+CORS_ORIGINS="http://localhost:3000"
+
+# Run server
+uvicorn server:app --reload --port 8001
+```
+
+### Frontend Setup
+
+```bash
+cd frontend
+yarn install
+
+# Create .env file with:
+REACT_APP_BACKEND_URL=http://localhost:8001
+
+# Run development server
+yarn start
+```
+
+## Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions to:
+- Netlify (Frontend)
+- Railway/Render/Heroku (Backend)
+- MongoDB Atlas (Database)
+
+## Project Structure
+
+```
+/
+├── backend/
+│   ├── server.py          # FastAPI application
+│   ├── requirements.txt   # Python dependencies
+│   └── .env              # Backend environment variables
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── OnboardingForm.jsx
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   └── ui/       # Shadcn UI components
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json      # Frontend dependencies
+│   └── .env             # Frontend environment variables
+├── netlify.toml         # Netlify configuration
+├── .nvmrc              # Node version specification
+└── DEPLOYMENT.md       # Deployment guide
+```
+
+## Environment Variables
+
+### Backend (.env)
+```
+MONGO_URL=mongodb://localhost:27017
+DB_NAME=client_forms_db
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_EMAIL=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+RECIPIENT_EMAIL=recipient@example.com
+CORS_ORIGINS=http://localhost:3000
+```
+
+### Frontend (.env)
+```
+REACT_APP_BACKEND_URL=http://localhost:8001
+```
+
+## API Endpoints
+
+### Public Endpoints
+- `GET /api/` - Health check
+- `POST /api/submissions` - Submit questionnaire
+- `GET /api/submissions` - Get all submissions
+- `GET /api/submissions/{id}` - Get specific submission
+
+## Form Sections
+
+1. **Contact Information** - Primary contact details
+2. **Company Identity & Branding** - Logo, colors, chatbot name
+3. **Chatbot Core Functionality** - Conversation starters
+4. **Knowledge Base & System Behavior** - Documents, directives, support contact
+5. **Technical Deployment** - Platform, management, technical contacts
+
+## Admin Dashboard
+
+Access at `/admin` to view all submissions with expandable details.
+
+## License
+
+Proprietary - ASKDD Chatbot
+
+## Support
+
+For issues or questions, contact: amrit@ddconsult.tech
