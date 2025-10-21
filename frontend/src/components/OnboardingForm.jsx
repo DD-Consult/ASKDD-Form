@@ -414,6 +414,7 @@ export default function OnboardingForm() {
             
             <div className="form-group">
               <Label htmlFor="knowledgeBaseDescription">Knowledge Base Documents Description</Label>
+              <p className="field-description">Please list and provide all documents you want the chatbot to learn from. This includes FAQs, product manuals, help guides, or specific website URLs</p>
               <Textarea
                 id="knowledgeBaseDescription"
                 data-testid="knowledge-description-input"
