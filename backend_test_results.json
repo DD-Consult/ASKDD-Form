@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-10-21T06:40:01.378587",
+  "total_tests": 6,
+  "passed_tests": 5,
+  "success_rate": 0.8333333333333334,
+  "results": [
+    {
+      "test": "API Root Endpoint",
+      "success": true,
+      "details": "Status: 200, Response: {'message': 'AI Chatbot Onboarding API'}"
+    },
+    {
+      "test": "Get Submissions (Empty)",
+      "success": true,
+      "details": "Status: 200, Count: 0"
+    },
+    {
+      "test": "Form Submission (With Files)",
+      "success": false,
+      "details": "'tuple' object has no attribute 'translate'"
+    },
+    {
+      "test": "Get Specific Submission",
+      "success": true,
+      "details": "Status: 200, Name: Test User"
+    },
+    {
+      "test": "Get All Submissions",
+      "success": true,
+      "details": "Status: 200, Count: 1"
+    },
+    {
+      "test": "Invalid Form Submission",
+      "success": true,
+      "details": "Status: 422, Response: {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"chatbot_functionality\"],\"msg\":\"Field required\",\"input\":null,\"url\":\"https://errors.pydantic.dev/2.12/v/missing\"},{\"type\":\"missing\",\"loc\":[\"body\",\"knowledge_b"
+    }
+  ]
+}
