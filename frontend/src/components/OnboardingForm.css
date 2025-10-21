@@ -17,6 +17,17 @@
   padding: 3rem 3rem 2rem;
   background: white;
   border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.header-logo {
+  margin-bottom: 1.5rem;
+}
+
+.logo-image {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 .form-header h1 {
