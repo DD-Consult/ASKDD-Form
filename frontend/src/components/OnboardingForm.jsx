@@ -354,33 +354,42 @@ export default function OnboardingForm() {
                 )}
               />
             </div>
+            
+            {/* Example Section */}
+            <div className="example-section">
+              <h3>Example:</h3>
+              <div className="example-colors">
+                <div className="color-example">
+                  <span className="color-label">Primary Brand Color:</span>
+                  <img src="https://customer-assets.emergentagent.com/job_questbot-creator/artifacts/k01amisk_primary.png" alt="Primary Color" className="color-indicator" />
+                </div>
+                <div className="color-example">
+                  <span className="color-label">Secondary Brand Color:</span>
+                  <img src="https://customer-assets.emergentagent.com/job_questbot-creator/artifacts/rac3npvt_secondary.png" alt="Secondary Color" className="color-indicator" />
+                </div>
+                <div className="color-example">
+                  <span className="color-label">Accent Color:</span>
+                  <img src="https://customer-assets.emergentagent.com/job_questbot-creator/artifacts/xg44epc3_accent.png" alt="Accent Color" className="color-indicator" />
+                </div>
+                <div className="color-example">
+                  <span className="color-label">Background Color:</span>
+                  <span className="color-value">default</span>
+                </div>
+                <div className="color-example">
+                  <span className="color-label">Chatbot size:</span>
+                  <span className="color-value">default</span>
+                </div>
+              </div>
+              <div className="example-image">
+                <img src="https://customer-assets.emergentagent.com/job_questbot-creator/artifacts/uffdaxah_Screenshot%202025-10-21%20at%205.48.59%E2%80%AFpm.png" alt="Chatbot Example" />
+              </div>
+            </div>
           </section>
 
           {/* Chatbot Core Functionality */}
           <section className="form-section">
             <h2 data-testid="functionality-section-title">Chatbot Core Functionality</h2>
-            <p className="section-description">Define operating hours and initial prompts</p>
-            
-            <div className="form-group">
-              <Label htmlFor="businessHours">Business Operating Hours (Optional)</Label>
-              <Input
-                id="businessHours"
-                data-testid="business-hours-input"
-                {...register('businessHours')}
-                placeholder='e.g., "Mon-Fri, 9:00 AM - 5:00 PM EST"'
-              />
-            </div>
-            
-            <div className="form-group">
-              <Label htmlFor="outOfHoursResponse">Out-of-Hours Response (Optional)</Label>
-              <Textarea
-                id="outOfHoursResponse"
-                data-testid="out-of-hours-input"
-                {...register('outOfHoursResponse')}
-                placeholder="Message to display outside business hours"
-                rows={3}
-              />
-            </div>
+            <p className="section-description">Define initial prompts for users</p>
             
             <div className="form-group">
               <Label>Conversation Starters (Optional - Up to 5, max 30 characters each)</Label>
