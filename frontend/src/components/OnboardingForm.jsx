@@ -392,7 +392,8 @@ export default function OnboardingForm() {
             <p className="section-description">Define initial prompts for users</p>
             
             <div className="form-group">
-              <Label>Conversation Starters (Optional - Up to 5, max 30 characters each)</Label>
+              <Label>Conversation Starters (Optional)</Label>
+              <p className="field-description">Please provide up to 5 short prompts (max 30 characters) that users can click to start a conversation.</p>
               {conversationStarters.map((starter, index) => (
                 <Input
                   key={index}
