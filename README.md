@@ -69,10 +69,14 @@ yarn start
 
 ## Deployment
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions to:
-- Netlify (Frontend)
-- Railway/Render/Heroku (Backend)
-- MongoDB Atlas (Database)
+**Quick Deploy (Recommended):** See [SIMPLE_DEPLOY.md](SIMPLE_DEPLOY.md) for step-by-step Netlify + Railway deployment (~15 minutes)
+
+**Detailed Guide:** See [DEPLOYMENT.md](DEPLOYMENT.md) for all deployment options and troubleshooting
+
+**Quick Reference:**
+- Frontend: Deploy to Netlify from GitHub
+- Backend: Deploy to Railway from same GitHub repo  
+- Database: MongoDB Atlas (free tier)
 
 ## Project Structure
 
