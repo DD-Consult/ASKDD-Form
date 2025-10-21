@@ -201,7 +201,7 @@ async def create_submission(
     knowledge_base: str = Form(...),
     technical_deployment: str = Form(...),
     logo: Optional[UploadFile] = File(None),
-    documents: Optional[List[UploadFile]] = File(None)
+    documents: List[UploadFile] = File(default=[])
 ):
     """Create a new form submission"""
     try:
