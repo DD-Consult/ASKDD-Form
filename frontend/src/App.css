@@ -10,6 +10,16 @@ body {
   color: #1a1a1a;
 }
 
+/* Hide Emergent badge */
+#emergent-badge,
+a[href*="emergent.sh"],
+a[href*="utm_source=emergent-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .App {
   min-height: 100vh;
 }
