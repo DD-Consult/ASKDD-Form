@@ -225,7 +225,9 @@ git push origin main
 
 ## Support
 
-For deployment issues:
+For deployment issues or questions, contact: **askdd@ddconsult.tech**
+
+Additional resources:
 - Netlify: [docs.netlify.com](https://docs.netlify.com)
 - Railway: [docs.railway.app](https://docs.railway.app)
 - Render: [render.com/docs](https://render.com/docs)
