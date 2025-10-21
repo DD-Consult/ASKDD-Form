@@ -157,7 +157,10 @@ export default function OnboardingForm() {
     <div className="form-container">
       <div className="form-wrapper">
         <div className="form-header">
-          <h1 data-testid="form-title">AI Chatbot Onboarding Questionnaire</h1>
+          <div className="header-logo">
+            <img src="https://customer-assets.emergentagent.com/job_questbot-creator/artifacts/2cltiffc_Options%205-transparent%20background%20copy%20%281%29.png" alt="ASKDD Logo" className="logo-image" />
+          </div>
+          <h1 data-testid="form-title">ASKDD Chatbot Onboarding Questionnaire</h1>
           <p>Complete this questionnaire to configure your chatbot's identity, knowledge, and core behaviors.</p>
         </div>
 
