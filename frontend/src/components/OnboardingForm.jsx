@@ -227,9 +227,8 @@ export default function OnboardingForm() {
               <Input
                 id="companyWebsite"
                 data-testid="company-website-input"
-                type="url"
                 {...register('companyWebsite', { required: 'Website is required' })}
-                placeholder="https://www.yourcompany.com"
+                placeholder="yourcompany.com or https://www.yourcompany.com"
               />
               {errors.companyWebsite && <span className="error-message">{errors.companyWebsite.message}</span>}
             </div>
