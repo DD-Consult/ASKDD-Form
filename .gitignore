@@ -46,4 +46,7 @@ yarn-error.log*
 
 # Misc
 .netlify/
-.cache/
+.cache/-e 
+# Environment files
+*.env
+*.env.*
