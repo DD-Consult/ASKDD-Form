@@ -157,14 +157,19 @@ class FormSubmissionAPITester:
                 'technical_deployment': json.dumps(form_data['technical_deployment'])
             }
             
-            # Prepare files correctly for requests
-            files = [
+            # Prepare files correctly for requests - multiple documents with same field name
+            files = {
+                'logo': test_files['logo']
+            }
+            
+            # Add multiple documents
+            files_list = [
                 ('logo', test_files['logo']),
                 ('documents', test_files['documents'][0]),
                 ('documents', test_files['documents'][1])
             ]
             
-            response = requests.post(f"{self.base_url}/submissions", data=data, files=files)
+            response = requests.post(f"{self.base_url}/submissions", data=data, files=files_list)
             success = response.status_code == 200
             
             if success:
@@ -172,7 +177,7 @@ class FormSubmissionAPITester:
                 details = f"Status: {response.status_code}, ID: {response_data.get('id', 'N/A')}"
                 submission_id = response_data.get('id')
             else:
-                details = f"Status: {response.status_code}, Response: {response.text}"
+                details = f"Status: {response.status_code}, Response: {response.text[:500]}"
                 submission_id = None
                 
             self.log_test("Form Submission (With Files)", success, details)
