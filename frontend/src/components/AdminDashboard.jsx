@@ -42,7 +42,10 @@ export default function AdminDashboard() {
   return (
     <div className="admin-container">
       <div className="admin-header">
-        <h1 data-testid="admin-title">Form Submissions</h1>
+        <div className="header-logo-admin">
+          <img src="https://customer-assets.emergentagent.com/job_questbot-creator/artifacts/2cltiffc_Options%205-transparent%20background%20copy%20%281%29.png" alt="ASKDD Logo" className="logo-image-admin" />
+        </div>
+        <h1 data-testid="admin-title">ASKDD Chatbot - Form Submissions</h1>
         <p>All client onboarding questionnaire submissions</p>
       </div>
 
