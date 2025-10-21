@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-21T06:40:01.378587",
+  "timestamp": "2025-10-21T06:40:17.953596",
   "total_tests": 6,
   "passed_tests": 5,
   "success_rate": 0.8333333333333334,
@@ -12,12 +12,12 @@
     {
       "test": "Get Submissions (Empty)",
       "success": true,
-      "details": "Status: 200, Count: 0"
+      "details": "Status: 200, Count: 1"
     },
     {
       "test": "Form Submission (With Files)",
       "success": false,
-      "details": "'tuple' object has no attribute 'translate'"
+      "details": "Status: 422, Response: {\"detail\":[{\"type\":\"list_type\",\"loc\":[\"body\",\"documents\"],\"msg\":\"Input should be a valid list\",\"input\":{\"filename\":\"test_doc2.csv\",\"file\":{\"_file\":{},\"_max_size\":1048576,\"_rolled\":false,\"_TemporaryFileArgs\":{\"mode\":\"w+b\",\"buffering\":-1,\"suffix\":null,\"prefix\":null,\"encoding\":null,\"newline\":null,\"dir\":null,\"errors\":null}},\"size\":36,\"headers\":{\"content-disposition\":\"form-data; name=\\\"documents\\\"; filename=\\\"test_doc2.csv\\\"\",\"content-type\":\"text/csv\"}},\"url\":\"https://errors.pydantic.dev/2.12/v/list_type\"}]}"
     },
     {
       "test": "Get Specific Submission",
@@ -27,7 +27,7 @@
     {
       "test": "Get All Submissions",
       "success": true,
-      "details": "Status: 200, Count: 1"
+      "details": "Status: 200, Count: 2"
     },
     {
       "test": "Invalid Form Submission",
