@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'sonner';
@@ -19,6 +19,10 @@ export default function OnboardingForm() {
   const [logoFile, setLogoFile] = useState(null);
   const [documentFiles, setDocumentFiles] = useState([]);
   const [conversationStarters, setConversationStarters] = useState(['', '', '', '', '']);
+  
+  useEffect(() => {
+    document.title = 'ASKDD Chatbot | Onboarding Questionnaire';
+  }, []);
   
   const { register, handleSubmit, control, watch, formState: { errors } } = useForm({
     defaultValues: {
