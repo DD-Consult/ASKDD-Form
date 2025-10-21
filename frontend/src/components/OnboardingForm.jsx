@@ -550,6 +550,7 @@ export default function OnboardingForm() {
             
             <div className="form-group">
               <Label htmlFor="websitePlatform">Website Platform *</Label>
+              <p className="field-description">What platform is your website built on?</p>
               <Input
                 id="websitePlatform"
                 data-testid="website-platform-input"
@@ -561,6 +562,7 @@ export default function OnboardingForm() {
             
             <div className="form-group">
               <Label htmlFor="websiteManagement">Website Management *</Label>
+              <p className="field-description">Who is responsible for making code-level edits or adding scripts to your website?</p>
               <Input
                 id="websiteManagement"
                 data-testid="website-management-input"
@@ -584,6 +586,7 @@ export default function OnboardingForm() {
               
               <div className="form-group">
                 <Label htmlFor="technicalContactEmail">Technical Contact Email *</Label>
+                <p className="field-description">Please provide the name and email address of the person we should coordinate the technical deployment with.</p>
                 <Input
                   id="technicalContactEmail"
                   data-testid="technical-contact-email-input"
