@@ -105,9 +105,9 @@ MONGO_URL=mongodb://localhost:27017
 DB_NAME=client_forms_db
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
-SMTP_EMAIL=your-email@gmail.com
+SMTP_EMAIL=askdd@ddconsult.tech
 SMTP_PASSWORD=your-app-password
-RECIPIENT_EMAIL=recipient@example.com
+RECIPIENT_EMAIL=askdd@ddconsult.tech
 CORS_ORIGINS=http://localhost:3000
 ```
 
