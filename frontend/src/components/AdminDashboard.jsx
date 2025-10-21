@@ -13,6 +13,7 @@ export default function AdminDashboard() {
   const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
+    document.title = 'ASKDD Chatbot | Admin Dashboard';
     fetchSubmissions();
   }, []);
 
