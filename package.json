@@ -1,0 +1,27 @@
+{
+  "name": "askdd-chatbot",
+  "version": "1.0.0",
+  "description": "ASKDD Chatbot onboarding questionnaire system",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/askdd-chatbot.git"
+  },
+  "author": "DD Consulting",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "install:frontend": "cd frontend && yarn install",
+    "install:backend": "cd backend && pip install -r requirements.txt",
+    "dev:frontend": "cd frontend && yarn start",
+    "dev:backend": "cd backend && uvicorn server:app --reload --port 8001",
+    "build:frontend": "cd frontend && yarn build"
+  },
+  "workspaces": [
+    "frontend"
+  ]
+}
