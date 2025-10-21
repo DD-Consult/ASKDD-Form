@@ -142,4 +142,10 @@ Proprietary - ASKDD Chatbot
 
 ## Support
 
-For issues or questions, contact: amrit@ddconsult.tech
+For issues or questions, contact: **askdd@ddconsult.tech**
+
+Additional resources:
+- Netlify: [docs.netlify.com](https://docs.netlify.com)
+- Railway: [docs.railway.app](https://docs.railway.app)
+- Render: [render.com/docs](https://render.com/docs)
+- MongoDB Atlas: [docs.atlas.mongodb.com](https://docs.atlas.mongodb.com)
