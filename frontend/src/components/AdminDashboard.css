@@ -1,0 +1,131 @@
+.admin-container {
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  background: #fafafa;
+}
+
+.admin-header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-family: 'Manrope', sans-serif;
+}
+
+.admin-header p {
+  color: #6b7280;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: #6b7280;
+}
+
+.no-submissions {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem;
+  background: white;
+  border-radius: 12px;
+  color: #9ca3af;
+}
+
+.no-submissions svg {
+  margin-bottom: 1rem;
+}
+
+.submissions-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.submission-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.submission-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submission-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.submission-info h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.submission-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.submission-meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.submission-meta svg {
+  color: #9ca3af;
+}
+
+.submission-details {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.submission-details section {
+  margin-top: 1.5rem;
+}
+
+.submission-details h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.detail-grid {
+  display: grid;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.detail-grid strong {
+  color: #1a1a1a;
+}
+
+.detail-grid ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.detail-grid li {
+  margin-bottom: 0.25rem;
+}
