@@ -94,8 +94,8 @@ export default function OnboardingForm() {
       // Chatbot Functionality
       const filteredStarters = conversationStarters.filter(s => s.trim() !== '');
       const chatbotFunctionality = {
-        business_hours: data.businessHours || null,
-        out_of_hours_response: data.outOfHoursResponse || null,
+        business_hours: null,
+        out_of_hours_response: null,
         conversation_starters: filteredStarters.length > 0 ? filteredStarters : null
       };
       
