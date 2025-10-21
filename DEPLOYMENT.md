@@ -68,9 +68,9 @@ Your FastAPI backend needs to be hosted separately. Here are recommended options
      DB_NAME=client_forms_db
      SMTP_HOST=smtp.gmail.com
      SMTP_PORT=587
-     SMTP_EMAIL=amrit@ddconsult.tech
+     SMTP_EMAIL=askdd@ddconsult.tech
      SMTP_PASSWORD=<your-app-password>
-     RECIPIENT_EMAIL=amrit@ddconsult.tech
+     RECIPIENT_EMAIL=askdd@ddconsult.tech
      CORS_ORIGINS=https://your-netlify-site.netlify.app
      ```
    - Set root directory to `/backend`
