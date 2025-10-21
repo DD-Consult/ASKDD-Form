@@ -2,15 +2,18 @@
 
 A professional client onboarding questionnaire system for collecting AI chatbot configuration requirements.
 
+**🚀 Deploy in 15 minutes:** Frontend to Netlify + Backend to Railway from GitHub
+
 ## Features
 
 - ✅ Comprehensive multi-section questionnaire
 - ✅ File upload support (logos and documents)
-- ✅ Email notifications with attachments
+- ✅ Email notifications with attachments to askdd@ddconsult.tech
 - ✅ MongoDB database storage
 - ✅ Admin dashboard for viewing submissions
-- ✅ Responsive, clean design
+- ✅ Responsive, clean design with ASKDD branding
 - ✅ Form validation
+- ✅ Auto-deploy from GitHub
 
 ## Tech Stack
 
