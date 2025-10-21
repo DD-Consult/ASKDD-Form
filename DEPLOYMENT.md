@@ -131,9 +131,9 @@ Your FastAPI backend needs to be hosted separately. Here are recommended options
    heroku config:set DB_NAME=client_forms_db
    heroku config:set SMTP_HOST=smtp.gmail.com
    heroku config:set SMTP_PORT=587
-   heroku config:set SMTP_EMAIL=amrit@ddconsult.tech
+   heroku config:set SMTP_EMAIL=askdd@ddconsult.tech
    heroku config:set SMTP_PASSWORD=<your-password>
-   heroku config:set RECIPIENT_EMAIL=amrit@ddconsult.tech
+   heroku config:set RECIPIENT_EMAIL=askdd@ddconsult.tech
    ```
 
 ---
