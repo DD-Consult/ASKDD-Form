@@ -157,10 +157,12 @@ class FormSubmissionAPITester:
                 'technical_deployment': json.dumps(form_data['technical_deployment'])
             }
             
-            files = {
-                'logo': test_files['logo'],
-                'documents': test_files['documents']
-            }
+            # Prepare files correctly for requests
+            files = [
+                ('logo', test_files['logo']),
+                ('documents', test_files['documents'][0]),
+                ('documents', test_files['documents'][1])
+            ]
             
             response = requests.post(f"{self.base_url}/submissions", data=data, files=files)
             success = response.status_code == 200
