@@ -602,6 +602,7 @@ export default function OnboardingForm() {
             
             <div className="form-group">
               <Label htmlFor="deploymentPreference">Deployment Preference *</Label>
+              <p className="field-description">Deployment is super simple, just a few lines of HTML code to copy and paste into your website. Is this something you/your team would be comfortable with handling or would you prefer some assistance?</p>
               <Textarea
                 id="deploymentPreference"
                 data-testid="deployment-preference-input"
