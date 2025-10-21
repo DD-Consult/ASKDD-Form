@@ -151,7 +151,21 @@ export default function OnboardingForm() {
       
     } catch (error) {
       console.error('Submission error:', error);
-      toast.error(error.response?.data?.detail || 'Failed to submit form. Please try again.');
+      
+      // Handle validation errors from backend
+      let errorMessage = 'Failed to submit form. Please try again.';
+      
+      if (error.response?.data?.detail) {
+        const detail = error.response.data.detail;
+        if (Array.isArray(detail)) {
+          // Pydantic validation errors
+          errorMessage = detail.map(err => `${err.loc.join('.')}: ${err.msg}`).join(', ');
+        } else if (typeof detail === 'string') {
+          errorMessage = detail;
+        }
+      }
+      
+      toast.error(errorMessage);
     } finally {
       setIsSubmitting(false);
     }
