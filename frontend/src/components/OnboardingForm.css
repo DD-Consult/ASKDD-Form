@@ -44,6 +44,22 @@
   line-height: 1.6;
 }
 
+.support-text {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.support-text a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.support-text a:hover {
+  text-decoration: underline;
+}
+
 .onboarding-form {
   padding: 2rem 3rem 3rem;
 }
