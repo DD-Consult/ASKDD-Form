@@ -180,6 +180,7 @@ export default function OnboardingForm() {
           </div>
           <h1 data-testid="form-title">ASKDD Chatbot Onboarding Questionnaire</h1>
           <p>Complete this questionnaire to configure your chatbot's identity, knowledge, and core behaviors.</p>
+          <p className="support-text">Need help? Contact us at <a href="mailto:askdd@ddconsult.tech">askdd@ddconsult.tech</a></p>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="onboarding-form">
