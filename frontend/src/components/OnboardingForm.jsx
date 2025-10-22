@@ -153,7 +153,7 @@ export default function OnboardingForm() {
       console.error('Submission error:', error);
       
       // Handle validation errors from backend
-      let errorMessage = 'Failed to submit form. Please try again.';
+      let errorMessage = 'Failed to submit form. Please try again or contact askdd@ddconsult.tech for assistance.';
       
       if (error.response?.data?.detail) {
         const detail = error.response.data.detail;
