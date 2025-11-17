@@ -74,60 +74,47 @@ export default function OnboardingForm() {
     setIsSubmitting(true);
     
     try {
+      // Prepare form data for Netlify Forms
       const formData = new FormData();
       
+      // Add Netlify form name
+      formData.append('form-name', 'askdd-chatbot-onboarding');
+      
       // Contact Info
-      const contactInfo = {
-        name: data.contactName,
-        email: data.contactEmail
-      };
+      formData.append('contact-name', data.contactName);
+      formData.append('contact-email', data.contactEmail);
       
       // Company Identity
-      const companyIdentity = {
-        legal_name: data.companyLegalName,
-        website: data.companyWebsite,
-        chatbot_display_name: data.chatbotDisplayName,
-        chatbot_persona: data.chatbotPersona || null,
-        primary_brand_color: data.primaryBrandColor,
-        secondary_brand_color: data.secondaryBrandColor,
-        accent_color: data.accentColor,
-        background_color: data.backgroundColorOption === 'custom' ? data.backgroundColorCustom : data.backgroundColorOption,
-        chatbot_size: data.chatbotSize
-      };
+      formData.append('company-legal-name', data.companyLegalName);
+      formData.append('company-website', data.companyWebsite);
+      formData.append('chatbot-display-name', data.chatbotDisplayName);
+      formData.append('chatbot-persona', data.chatbotPersona || '');
+      formData.append('primary-brand-color', data.primaryBrandColor);
+      formData.append('secondary-brand-color', data.secondaryBrandColor);
+      formData.append('accent-color', data.accentColor);
+      formData.append('background-color', data.backgroundColorOption === 'custom' ? data.backgroundColorCustom : data.backgroundColorOption);
+      formData.append('chatbot-size', data.chatbotSize);
       
       // Chatbot Functionality
       const filteredStarters = conversationStarters.filter(s => s.trim() !== '');
-      const chatbotFunctionality = {
-        business_hours: null,
-        out_of_hours_response: null,
-        conversation_starters: filteredStarters.length > 0 ? filteredStarters : null
-      };
+      formData.append('conversation-starters', filteredStarters.join(', '));
       
       // Knowledge Base
-      const knowledgeBase = {
-        knowledge_base_description: data.knowledgeBaseDescription || null,
-        csv_format_confirmed: data.csvFormatConfirmed || false,
-        core_directive: data.coreDirective,
-        fallback_message: data.coreDirective === 'Option B' ? data.fallbackMessage : null,
-        other_ai_directives: data.otherAIDirectives || null,
-        support_contact: data.supportContact
-      };
+      formData.append('knowledge-base-description', data.knowledgeBaseDescription || '');
+      formData.append('csv-format-confirmed', data.csvFormatConfirmed ? 'Yes' : 'No');
+      formData.append('core-directive', data.coreDirective);
+      formData.append('fallback-message', data.fallbackMessage || '');
+      formData.append('other-ai-directives', data.otherAIDirectives || '');
+      formData.append('support-contact', data.supportContact);
       
       // Technical Deployment
-      const technicalDeployment = {
-        website_platform: data.websitePlatform,
-        website_management: data.websiteManagement,
-        technical_contact_name: data.technicalContactName,
-        technical_contact_email: data.technicalContactEmail,
-        deployment_preference: data.deploymentPreference
-      };
+      formData.append('website-platform', data.websitePlatform);
+      formData.append('website-management', data.websiteManagement);
+      formData.append('technical-contact-name', data.technicalContactName);
+      formData.append('technical-contact-email', data.technicalContactEmail);
+      formData.append('deployment-preference', data.deploymentPreference);
       
-      formData.append('contact_info', JSON.stringify(contactInfo));
-      formData.append('company_identity', JSON.stringify(companyIdentity));
-      formData.append('chatbot_functionality', JSON.stringify(chatbotFunctionality));
-      formData.append('knowledge_base', JSON.stringify(knowledgeBase));
-      formData.append('technical_deployment', JSON.stringify(technicalDeployment));
-      
+      // Add files
       if (logoFile) {
         formData.append('logo', logoFile);
       }
@@ -136,34 +123,28 @@ export default function OnboardingForm() {
         formData.append('documents', file);
       });
       
-      const response = await axios.post(`${API}/submissions`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+      // Submit to Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        body: formData
       });
+      
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
       
       toast.success('Form submitted successfully! You will receive a confirmation email shortly.');
       
       // Reset form after successful submission
       setTimeout(() => {
-        window.location.reload();
+        window.location.href = '/thank-you';
       }, 2000);
       
     } catch (error) {
       console.error('Submission error:', error);
       
-      // Handle validation errors from backend
+      // Handle validation errors
       let errorMessage = 'Failed to submit form. Please try again or contact askdd@ddconsult.tech for assistance.';
-      
-      if (error.response?.data?.detail) {
-        const detail = error.response.data.detail;
-        if (Array.isArray(detail)) {
-          // Pydantic validation errors
-          errorMessage = detail.map(err => `${err.loc.join('.')}: ${err.msg}`).join(', ');
-        } else if (typeof detail === 'string') {
-          errorMessage = detail;
-        }
-      }
       
       toast.error(errorMessage);
     } finally {
