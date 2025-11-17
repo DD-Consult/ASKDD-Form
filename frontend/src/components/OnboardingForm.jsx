@@ -575,7 +575,7 @@ export default function OnboardingForm() {
                 id="websiteManagement"
                 data-testid="website-management-input"
                 {...register('websiteManagement', { required: 'Website management info is required' })}
-                placeholder='e.g., "Internal web developer", "Marketing team", "External agency"'
+                placeholder='e.g., "Internal web developer", "I handle it myself", "External agency"'
               />
               {errors.websiteManagement && <span className="error-message">{errors.websiteManagement.message}</span>}
             </div>
