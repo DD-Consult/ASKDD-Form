@@ -164,7 +164,9 @@ export default function OnboardingForm() {
           <p className="support-text">Need help? Contact us at <a href="mailto:askdd@ddconsult.tech">askdd@ddconsult.tech</a></p>
         </div>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="onboarding-form">
+        <form onSubmit={handleSubmit(onSubmit)} className="onboarding-form" name="askdd-chatbot-onboarding" data-netlify="true" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="askdd-chatbot-onboarding" />
+          
           {/* Contact Information */}
           <section className="form-section">
             <h2 data-testid="contact-section-title">Contact Information</h2>
