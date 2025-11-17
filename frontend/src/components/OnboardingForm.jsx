@@ -119,9 +119,13 @@ export default function OnboardingForm() {
         formData.append('logo', logoFile);
       }
       
-      documentFiles.forEach(file => {
-        formData.append('documents', file);
+      // Add documents with unique field names for Netlify Forms
+      documentFiles.forEach((file, index) => {
+        formData.append(`document-${index + 1}`, file);
       });
+      
+      // Add count of documents
+      formData.append('documents-count', documentFiles.length.toString());
       
       // Submit to Netlify Forms
       const response = await fetch('/', {
