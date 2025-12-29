@@ -137,7 +137,7 @@ export default function OnboardingForm() {
         throw new Error('Form submission failed');
       }
       
-      toast.success('Form submitted successfully! You will receive a confirmation email shortly.');
+      toast.success('Form submitted successfully! Thank you for completing the questionnaire.');
       
       // Reset form after successful submission
       setTimeout(() => {
