@@ -25,8 +25,7 @@ export default function ThankYou() {
             Your chatbot onboarding questionnaire has been submitted successfully.
           </p>
           <p className="thank-you-details">
-            We've received your information and will review it shortly. 
-            You'll receive a confirmation email at the address you provided.
+            We've received your information and will review it shortly.
           </p>
           <p className="thank-you-contact">
             If you have any questions, please contact us at{' '}
